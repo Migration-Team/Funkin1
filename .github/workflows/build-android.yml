@@ -56,7 +56,6 @@ jobs:
         run: |
           haxelib setup ~/haxelib
           haxelib git hxcpp https://github.com/FunkinDroidTeam/hxcpp
-          haxelib git hxp https://github.com/openfl/hxp
           haxelin git json2object https://github.com/FunkinCrew/json2object
           haxelib git lime https://github.com/FunkinDroidTeam/lime
           haxelib git mconsole https://github.com/massive-oss/mconsole
@@ -96,7 +95,6 @@ jobs:
           haxelib run lime config ANDROID_NDK_ROOT $ANDROID_NDK_HOME
           haxelib run lime config JAVA_HOME $JAVA_HOME
           haxelib run lime config ANDROID_SETUP true
-          haxelib set hxp 1.2.2
         env:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
